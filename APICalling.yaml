@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  title: api-gateway
+  description: API Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /v1/hello:
+    get:
+      summary: Hi Service
+      operationId: hello-v1
+      x-google-backend:
+        address: https://function-1-o7b4nticdq-uc.a.run.app/
+      responses:
+        '200':
+          description: OK
